@@ -1,0 +1,17 @@
+tensorflow
+fastapi
+uvicorn
+python-multipart
+pillow
+tensorflow-serving-api==2.5.0
+matplotlib
+numpy
+streamlit
+streamlit 
+requests
+python-dotenv
+gpt_index==0.4.15
+langchain
+google-generativeai
+langchain-google-genai 
+streamlit_chat
