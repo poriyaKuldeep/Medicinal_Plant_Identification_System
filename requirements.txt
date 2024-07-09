@@ -15,3 +15,5 @@ langchain
 google-generativeai
 langchain-google-genai 
 streamlit_chat
+python-box==6.0.2
+joblib
