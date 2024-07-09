@@ -4,16 +4,16 @@
 Clone the repository
 
 ```bash
-https://github.com/poriyaKuldeep/Medicinal-Plant-Identification-System
+https://github.com/poriyaKuldeep/Medicinal_Plant_Identification_System
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n cnncls python=3.10 -y
+conda create -n env python=3.10 -y
 ```
 
 ```bash
-conda activate cnncls
+conda activate env
 ```
 
 
