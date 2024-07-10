@@ -20,3 +20,5 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("cnnClassifierLogger")
+
+#by ___init__.py python recognize this directory as package:
