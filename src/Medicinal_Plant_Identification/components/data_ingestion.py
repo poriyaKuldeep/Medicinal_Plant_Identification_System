@@ -3,7 +3,7 @@ import zipfile
 import gdown
 from src.Medicinal_Plant_Identification import logger
 from src.Medicinal_Plant_Identification.utils.common import get_size
-from src.Medicinal_Plant_Identification.entity.config_entity import *
+from src.Medicinal_Plant_Identification.entity.config_entity import DataIngestionConfig
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
