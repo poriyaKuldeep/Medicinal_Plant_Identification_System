@@ -4,6 +4,7 @@ from pathlib import Path
 from zipfile import ZipFile
 import tensorflow as tf
 from keras.applications.resnet50 import ResNet50
+from keras.applications.vgg16 import VGG16
 from src.Medicinal_Plant_Identification.entity.config_entity import PrepareBaseModelConfig
 
 
@@ -13,7 +14,7 @@ class PrepareBaseModel:
 
     
     def get_base_model(self):
-        self.model = ResNet50(
+        self.model = VGG16(
             weights=self.config.params_weights,
             include_top=self.config.params_include_top,
             input_shape=self.config.params_image_size,
