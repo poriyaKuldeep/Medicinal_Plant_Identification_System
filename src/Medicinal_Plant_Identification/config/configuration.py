@@ -3,6 +3,8 @@ from src.Medicinal_Plant_Identification.utils.common import read_yaml,create_dir
 from src.Medicinal_Plant_Identification.entity.config_entity import *
 import os
 from src.Medicinal_Plant_Identification.entity.config_entity import TrainingConfig
+from src.Medicinal_Plant_Identification.constants import *
+from src.Medicinal_Plant_Identification.utils.common import read_yaml,create_directories,save_json
 
 class ConfigurationManager:
     def __init__(
@@ -68,3 +70,16 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model="artifacts/training/model.h5",
+            training_data="artifacts\data_ingestion\Medicinal plant dataset",
+            mlflow_uri="https://dagshub.com/poriyaKuldeep/Medicinal_Plant_Identification_System.mlflow",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
+    
+    

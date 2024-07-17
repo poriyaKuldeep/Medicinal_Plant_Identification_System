@@ -37,3 +37,33 @@ conda activate env
 ```bash
 pip install -r requirements.txt
 ```
+
+## MLflow
+
+- [Documentation](https://mlflow.org/docs/latest/index.html)
+
+- [MLflow tutorial](https://youtu.be/qdcHHrsXA48?si=bD5vDS60akNphkem)
+
+##### cmd
+- mlflow ui
+
+### dagshub
+[dagshub](https://dagshub.com/)
+
+MLFLOW_TRACKING_URI=https://dagshub.com/poriyaKuldeep/Medicinal_Plant_Identification_System-MLflow-DVC.mlflow\
+MLFLOW_TRACKING_USERNAME=poriyaKuldeep \
+MLFLOW_TRACKING_PASSWORD=f1e20c2f16009ae5b11a68333b8a7707509aa265 \
+python script.py
+
+Run this to export as env variables:
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/poriyaKuldeep/Medicinal_Plant_Identification_System-MLflow-DVC.mlflow
+
+
+export MLFLOW_TRACKING_USERNAME=poriyaKuldeep 
+
+export MLFLOW_TRACKING_PASSWORD=f1e20c2f16009ae5b11a68333b8a7707509aa265
+
+```
