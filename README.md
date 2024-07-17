@@ -51,9 +51,11 @@ pip install -r requirements.txt
 [dagshub](https://dagshub.com/)
 
 MLFLOW_TRACKING_URI=https://dagshub.com/poriyaKuldeep/Medicinal_Plant_Identification_System-MLflow-DVC.mlflow\
+
 MLFLOW_TRACKING_USERNAME=poriyaKuldeep \
-MLFLOW_TRACKING_PASSWORD=f1e20c2f16009ae5b11a68333b8a7707509aa265 \
-python script.py
+
+MLFLOW_TRACKING_PASSWORD=..... \
+python script.pys
 
 Run this to export as env variables:
 
@@ -61,9 +63,8 @@ Run this to export as env variables:
 
 export MLFLOW_TRACKING_URI=https://dagshub.com/poriyaKuldeep/Medicinal_Plant_Identification_System-MLflow-DVC.mlflow
 
-
 export MLFLOW_TRACKING_USERNAME=poriyaKuldeep 
 
-export MLFLOW_TRACKING_PASSWORD=f1e20c2f16009ae5b11a68333b8a7707509aa265
+export MLFLOW_TRACKING_PASSWORD=.....
 
 ```
