@@ -1,6 +1,7 @@
-from src.Medicinal_Plant_Identification.config.configuration import *
-from src.Medicinal_Plant_Identification.components.data_ingestion import DataIngestion
-from src.Medicinal_Plant_Identification import logger
+# from src.Medicinal_Plant_Identification.config.configuration import *
+from Medicinal_Plant_Identification.components.data_ingestion import DataIngestion
+from Medicinal_Plant_Identification import logger
+from Medicinal_Plant_Identification.config.configuration import ConfigurationManager
 
 STAGE_NAME="Data Ingestion stage"
 
