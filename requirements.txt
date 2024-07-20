@@ -6,7 +6,6 @@ pillow
 tensorflow-serving-api==2.5.0
 matplotlib
 numpy
-streamlit
 streamlit 
 requests
 python-dotenv
@@ -18,4 +17,5 @@ streamlit_chat
 python-box==6.0.2
 joblib
 dvc
-
+python-dotenv
+langchain_community

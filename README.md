@@ -1,18 +1,17 @@
 # Medicinal_Plant_Identification_System_MLflow-DVC
 
 
-## Workflows
+## Objective :
+The primary objective of our Medicinal Plant Identification System is to provide a reliable and efficient tool for botanists, herbalists, researchers, and enthusiasts to quickly identify medicinal plants based on their visual attributes. This system aims to bridge the gap between traditional knowledge of plant identification and modern technological advancements, making it easier for users to access information about the medicinal properties of plants.
 
-1. Update config.yaml
-2. Update secrets.yaml [Optional]
-3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline 
-8. Update the main.py
-9. Update the dvc.yaml
-10. app.py
+
+### Components:
+1. **User**: Uploads a photo via the web application.
+2. **Web Application**: created web application using Streamlit and FastAPI for instant plant predictions.
+3. **Model**: Uses a VGG16 model trained on a plant dataset to predict diffrent Plants.
+4. **MLflow**: Used for comparing and choosing model parameters during the testing phase.
+5. **DVC**: Employed for data and model versioning.
+
 
 # How to run?
 ### STEPS:
