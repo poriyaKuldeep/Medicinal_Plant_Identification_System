@@ -16,6 +16,8 @@ This system aims to bridge the gap between traditional knowledge of plant identi
 7. **ChatBot**: Create a "Medical Bot" to respond to user inquiries about plants.  -->
 
 
+
+
 ## Technologies Used
 
 - **Python**: Create a modular Python script to guarantee the maintenance of industry-standard code quality.
@@ -90,15 +92,6 @@ This system aims to bridge the gap between traditional knowledge of plant identi
    
    * Provide an easy-to-use chatbot interface using Streamllit to assist users in learning more specific information about plants.
    * Users can pose various questions to the chatbot about various plants.
-
-
-
-
-## Technologies Used
-
-- **MLflow**: An open-source platform for managing the end-to-end machine learning lifecycle.
-- **DVC (Data Version Control)**: Versioning data and machine learning models to ensure reproducibility.
-- **Dagshub**: A collaboration platform for data science and machine learning projects.
 
 
 

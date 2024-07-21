@@ -60,10 +60,10 @@ if label:
     from langchain.prompts import PromptTemplate
 
     import google.generativeai as genai
-    from langchain_google_genai import ChatGoogleGenerativeAI
+    # from langchain_google_genai import ChatGoogleGenerativeAI
     from langchain.memory import ConversationBufferWindowMemory
     from langchain.chains import ConversationChain
-    from langchain.chains.question_answering import load_qa_chain
+    # from langchain.chains.question_answering import load_qa_chain
     
 
 
@@ -74,7 +74,7 @@ if label:
         MessagesPlaceholder
     )
     from streamlit_chat import message
-    from langchain.llms import google_palm
+    # from langchain.llms import google_palm
     # from langchain_community.llms.google_palm import GooglePalm
     from langchain_google_genai import GoogleGenerativeAI
     from langchain.schema.output_parser import StrOutputParser
@@ -132,41 +132,43 @@ if label:
 
     #conversation part:
 
-
+    
     st.header("If you want to know more about plant Our AI assistane Is here to help you")
 
-    if 'responses' not in st.session_state:
-        st.session_state['responses'] = ["How can I assist you?"]
+    # if 'responses' not in st.session_state:
+    #     st.session_state['responses'] = ["How can I assist you?"]
 
-    if 'requests' not in st.session_state:
-        st.session_state['requests'] = []
+    # if 'requests' not in st.session_state:
+    #     st.session_state['requests'] = []
 
-    if 'buffer_memory' not in st.session_state:
-                st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
-
-
+    # if 'buffer_memory' not in st.session_state:
+    #             st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
 
 
-    def get_response(query):
-            template = """The following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
 
-            Current conversation:
-            {history}
-            Human: {input}
-            AI Assistant:"""
-            PROMPT = PromptTemplate(input_variables=["history", "input"], template=template)
-            conversation = ConversationChain(
-                prompt=PROMPT,
-                llm=model,
-                verbose=True,
-                memory=ConversationBufferWindowMemory(ai_prefix="AI Assistant"),
-            )
-            return conversation.predict(input=query)
+
+    # def get_response(query):
+    #         template = """The following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+    #         Current conversation:
+    #         {history}
+    #         Human: {input}
+    #         AI Assistant:"""
+    #         PROMPT = PromptTemplate(input_variables=["history", "input"], template=template)
+    #         conversation = ConversationChain(
+    #             prompt=PROMPT,
+    #             llm=model,
+    #             verbose=True,
+    #             memory=ConversationBufferWindowMemory(ai_prefix="AI Assistant"),
+    #         )
+    #         return conversation.predict(input=query)
         
     def get_response_final(user_query, chat_history):
 
         template = """
-        You are a helpful assistant. Answer the following questions considering the history of the conversation:
+        You are a helpful assistant, which Answer 
+        You are a knowledgeable medical bot specialized in providing information about various medicinal plants. 
+        ans the  questions considering the history of the conversation:
 
         Chat history: {chat_history}
 
@@ -176,10 +178,12 @@ if label:
         prompt = ChatPromptTemplate.from_template(template)
 
         output_parser=StrOutputParser()
+
+        llm=GoogleGenerativeAI(model="models/text-bison-001", google_api_key=os.environ["GOOGLE_API_KEY"], temperature=0.1)
             
-        chain = prompt | model | output_parser
+        chain = prompt | llm | output_parser
         
-        return chain.stream({
+        return chain.invoke({
             "chat_history": chat_history,
             "user_question": user_query,
         })      
@@ -197,6 +201,7 @@ if label:
     user_query=st.chat_input("Your message")
 
 
+
     #conversation:
     for message in st.session_state.chat_history:
         if isinstance(message,HumanMessage):
@@ -212,7 +217,9 @@ if label:
         with st.chat_message("Human"):
                 st.markdown(user_query)
         with st.chat_message("AI"):
-                ai_response = st.write_stream(get_response_final(user_query, st.session_state.chat_history))
+                # ai_response = st.write(get_response_final(user_query, st.session_state.chat_history))
+                ai_response = get_response_final(user_query, st.session_state.chat_history)
+                st.markdown(ai_response)
 
         st.session_state.chat_history.append(AIMessage(ai_response))
 
