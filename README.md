@@ -1,4 +1,4 @@
-# Medicinal_Plant_Identification_System_MLflow-DVC
+# Medicinal_Plant_Identification_System.
 
 
 ## Objective :
