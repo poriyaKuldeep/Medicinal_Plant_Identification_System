@@ -54,6 +54,7 @@ This system aims to bridge the gap between traditional knowledge of plant identi
    
    * Write modular code to create training pipeline using python.
    * Trained Fine-tuned vgg16 model on different parameters.
+   * Achieved 88% of validation accrcay .
    * Focused on ML operations, with additional work needed for model selection, preprocessing, and training.
 
 
