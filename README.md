@@ -5,6 +5,7 @@
 The primary objective of our Medicinal Plant Identification System is to provide a reliable and efficient tool for botanists, herbalists, researchers, and enthusiasts to quickly identify medicinal plants based on their visual attributes. <br>
 This system aims to bridge the gap between traditional knowledge of plant identification and modern technological advancements, making it easier for users to access information about the medicinal properties of plants.
 
+https://github.com/user-attachments/assets/557bdd4c-07dc-4e27-8f1a-f72120bef040
 
 <!-- ### Components:
 1. **User**: Uploads a photo via the web application.
